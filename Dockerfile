@@ -12,4 +12,4 @@ RUN useradd --uid 999 --gid 999 couchbase
 RUN chown -R couchbase:couchbase *
 USER couchbase
 EXPOSE 8091 8092 11209 11210 11211
-CMD [ "install/bin/couchbase-server" ]
+CMD [ "install/bin/couchbase-server", "--", "-noinput" ]
